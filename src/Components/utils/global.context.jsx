@@ -12,14 +12,14 @@ export const ContextProvider = ({ children }) => {
 
   const anotherData = useMemo(() => {
     const getDentist = async () => {
-      const data = await fetch("https://jsonplaceholder.typicode.com/users")
+      const dataFeched = await fetch("https://jsonplaceholder.typicode.com/users")
         .then((response) => {
           console.log("Esta es la respuesta", response)
           return response.json()
         })
-      return (data)
+      return (dataFeched)
     }
-    localStorage.setItem("favoritesDentist",JSON.stringify(data))
+    localStorage.setItem("favoritos",JSON.stringify(data))
     return {getDentist,theme,data,setTheme,setData}
   },[theme,data])
 

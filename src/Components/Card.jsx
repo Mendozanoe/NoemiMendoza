@@ -25,13 +25,13 @@ import { ContextGlobal } from "./utils/global.context";
 
   return (
 
-    <div className="card">
+    <div className="card" style={{ textAlign: "center" }}>
       <Link to={"detail/" + id} >
-        <img src={doctor} alt={name} style={{ width:130,borderRadius:100,display:"flex",alignContent:"center"}} />
+        <img src={doctor} alt={name} style={{ width:130,borderRadius:100,display: "block", margin: "0 auto"}} />
         <h1>{name}</h1>
         <h2>{username}</h2>
         <h3>{id}</h3>
-        <button onClick={addFav(name, username, id)} className="favButton">Add fav</button>
+        <button onClick={()=> addFav(name, username, id)} className="favButton">Add fav</button>
       </Link>
     </div>
 

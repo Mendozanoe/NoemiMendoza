@@ -12,11 +12,11 @@ const Favs = () => {
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {data.map((dentist)=>{
-          return(
-            <Card key={dentist.id}name={dentist.name} id={dentist.id}username={dentist.username}/>
-          )
-        })}
+    {data.map((dentista)=>{
+      return(
+        <Card key={dentista.id} name={dentista.name} username={dentista.username} id={dentista.id} />
+      )
+    })}
       </div>
     </>
   );
